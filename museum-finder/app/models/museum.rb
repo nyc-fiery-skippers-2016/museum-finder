@@ -1,5 +1,6 @@
 class Museum < ActiveRecord::Base
-  validates : :name, presence: true, uniqueness: true
+  validates: :name, presence: true, uniqueness: true
+  serialize: :photos
 
   belongs_to :category
   has_many :specials
