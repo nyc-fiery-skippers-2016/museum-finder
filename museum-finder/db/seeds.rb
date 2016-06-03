@@ -1,4 +1,3 @@
-Museum.delete_all
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
@@ -49,6 +48,15 @@ cleaned_museum_data.each_with_index do |museum, idx|
     photos: museum[:photos],
     place_id: museum[:place_id],
     rates: museums[idx]["rates"])
+end
+
+#create categories
+
+categories = ["Art", "Classic Art", "Decorative/Design", "Modern/Contemporary", "Film/Photography", "Sculpture", "Textile", "Architecture", "History", "Natural History/Science", "Historic Homes", "Sports", "Military/Police", "Science", "Technology", "Media", "Transportation", "Maritime", "Zoo", "Garden", "Children's", "Cultural", "Memorial", "African American", "Local", "Jewish", "Native American", "Regional", "Amusement", "Religious", "Music", "Outdoor"]
+
+categories.each do |category|
+  Category.create!(
+    name: category)
 end
 
 # Museum.find(1,4,7).update_all(category: "Modern")
