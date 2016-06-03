@@ -1,2 +1,9 @@
-user show
-<%= @user.email %>
+<%= @user.name %>'s Favorites
+
+<p>Specials events for your favorited museums, such as free hours, will be emailed to you at the beginning of each month.</p>
+
+<ul>
+<% @user.favorited_museums.each do |museum| %>
+	<li><%= link_to "#{museum.name}", museum_path(museum.id) %></li>
+<%end%>
+</ul>
