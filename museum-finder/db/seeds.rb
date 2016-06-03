@@ -51,8 +51,7 @@ cleaned_museum_data.each_with_index do |museum, idx|
     rates: museums[idx]["rates"])
 end
 
-Museum.find(1,4,7).update_all(category: "Modern")
-
+# Museum.find(1,4,7).update_all(category: "Modern")
 
 
 
