@@ -1,7 +1,14 @@
 <h2>Sign up</h2>
 
+
+<div class="sign-up">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+
+ <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username, autofocus: true%>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -27,6 +34,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 
 
 
