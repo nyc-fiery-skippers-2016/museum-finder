@@ -6,30 +6,31 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# museums = holds list of museums
+data = HTTParty.get('https://data.cityofnewyork.us/download/kcrm-j9hh/application/xml')
+converted_data = Crack::XML.parse(data)
 
-# @client = GooglePlaces::Client.new("AIzaSyAuZ_wtI3N7LcecgNJ_sJVq_Aun5WB9W10")
+museums = converted_data['museums']['museum']
 
-# queried_museums = museums.each do |museum|
-#   @client.spots_by_query(museum.name)
+# museum_index = museums.each do |museum|
+#   Museum.create!( name: museum['name'] )
 # end
 
-# full_museum_data = queried_museums.each do |museum|
-#   @client.spot(museum.place_id)
-# end
+@client = GooglePlaces::Client.new("AIzaSyAuZ_wtI3N7LcecgNJ_sJVq_Aun5WB9W10")
+
+queried_museums = []
+museums.map do |museum|
+  queried_museums << @client.spots_by_query(museum["name"])
+end
+
+full_museum_data = []
+queried_museums.each do |museum|
+  full_museum_data << @client.spot(museum.first.place_id)
+end
+
 
 # full_museum_data.each do |musem|
 #   museum.slice!("name", "formatted_address", "formatted_phone_number", "lat", "lng", "opening hours", "photos", "place_id")
 # end
 
 # end
-data = HTTParty.get('https://data.cityofnewyork.us/download/kcrm-j9hh/application/xml')
-converted_data = Crack::XML.parse(data)
-# converted_data = data.to_json
-# binding.pry
-# JSON.parse(converted_data)
-museums = converted_data['museums']['museum']
-museum_index = museums.each do |museum|
-  Museum.create!( name: museum['name'] )
-end
 
