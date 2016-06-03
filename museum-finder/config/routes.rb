@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
+  # categories has an index of categories & a show with the list of museums within category
+  resources :categories, only: [:index, :show]
+
+  # museum has show page with museum info
+  resources :museums, only: [:show]
+
+  # devise takes care of users sessions and create
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registration: 'users/registrations'
   }
 
-  root :to => 'application#index'
+  root :to => 'categories#index'
 
   devise_scope :user do
     get '/user/sign_out', to: 'users/sessions#destroy'
