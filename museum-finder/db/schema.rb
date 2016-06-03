@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160603002156) do
   add_index "specials", ["museum_id"], name: "index_specials_on_museum_id", using: :btree
 
   create_table "users", force: :cascade do |t|
+    t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
