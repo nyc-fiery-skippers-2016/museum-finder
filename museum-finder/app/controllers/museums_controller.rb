@@ -4,4 +4,5 @@ class MuseumsController < ApplicationController
     @museum = Museum.find_by(id: params[:id])
   end
 
+
 end
