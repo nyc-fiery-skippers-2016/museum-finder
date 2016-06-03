@@ -7,17 +7,20 @@ Rails.application.routes.draw do
   resources :museums, only: [:show]
 
   # devise takes care of users sessions and create
+
+
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registration: 'users/registrations'
   }
 
-  root :to => 'categories#index'
 
   devise_scope :user do
     get '/user/sign_out', to: 'users/sessions#destroy'
   end
 
+  resources :users, only: [:show]
+  root :to => 'categories#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
