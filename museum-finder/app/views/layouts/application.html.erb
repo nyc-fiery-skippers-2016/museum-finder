@@ -23,8 +23,12 @@
     <div class="top-bar menu-to-expand" id="main-menu">
       <div class="top-bar-left">
         <ul class="vertical dropdown menu" data-dropdown-menu>
+          <%if signed_in?%>
+            <li class="row"><a href="#">Sign Out</a></li>
+          <%else%>
             <li class="row"><a href="#">Login</a></li>
             <li class="row"><a href="#">Register</a></li>
+          <%end%>
         </ul>
       </div>
     </div>
