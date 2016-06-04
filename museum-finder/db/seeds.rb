@@ -59,7 +59,37 @@ categories.each do |category|
     name: category)
 end
 
-# Museum.find(1,4,7).update_all(category: "Modern")
+artArray1 = [1,4,8,10,11,12,13,14,15,24,20,21,22,26,29,36,37,38,44,46]
+historyArray9 = [2,19,21,27,41,33,34,42,43]
+scienceArray14 = [5,6,16,30,31,32,34,39,40]
+childrensArray21 = [7,9]
+culturalArray22 = [3,12,17,18,19,23,25,28,35,42]
+outdoorArray32 = [5,6,16,31,35,40,45]
+
+artArray1.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 1)
+end
+
+historyArray9.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 9)
+end
+
+scienceArray14.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 14)
+end
+
+childrensArray21.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 21)
+end
+
+culturalArray22.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 22)
+end
+
+outdoorArray32.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 32)
+end
+
 
 
 

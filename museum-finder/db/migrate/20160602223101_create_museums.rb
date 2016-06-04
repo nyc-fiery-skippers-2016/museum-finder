@@ -11,7 +11,6 @@ class CreateMuseums < ActiveRecord::Migration
       t.string :place_id
       t.string :rates
       t.string :is_free
-      t.references :category, index: true
 
       t.timestamps null: false
     end
