@@ -59,6 +59,8 @@ categories.each do |category|
     name: category)
 end
 
+MuseumCategory.create!(
+  [museum_id: 1])
 # Museum.find(1,4,7).update_all(category: "Modern")
 
 
