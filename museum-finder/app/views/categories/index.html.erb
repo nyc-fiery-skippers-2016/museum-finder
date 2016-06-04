@@ -1,1 +1,9 @@
-<%= react_component('CategoryContainer')%>
+<h1 id="category-header">CATEGORIES</h1>
+
+<div class="row small-up-4">
+  <% @categories.each do |category| %>
+    <div class="column">
+      <h4><a href="/categories/<%=category.id%>"><%= category.name.upcase %></a></h4>
+    </div>
+  <%end%>
+</div>
