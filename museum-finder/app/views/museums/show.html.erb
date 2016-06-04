@@ -40,12 +40,25 @@
 
 <div class="row">
   <div class="small-4 columns">
-    <h4>Hours:</h4>
+    <div class="row">
+      <div class="small-12">
+        <h4>Hours:</h4>
+      </div>
+    </div>
+    <% @museum.format_hours.each do |hours| %>
+      <div class="row">
+        <div class="small-12">
+          <%= hours %>
+        </div>
+      </div>
+    <%end%>
   </div>
+
   <div class="small-4 columns">
     <h4>Admission</h4></br>
     <h4>Specials<h4>
   </div>
+
   <div class="small-4 columns">
     <h4>Contact</h4>
   </div>
