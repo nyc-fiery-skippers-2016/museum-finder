@@ -125,11 +125,11 @@ userfav3.each do |museumId|
     museum_id: museumId)
 end
 
-#create specials - FIX - need to find each museum by museum.rates and then set museum.specials
+#create specials
 
-Museum.all.each_with_index do |museum, idx|
-  Special.create!(
-    description: museums[idx]["specials"],
-    museum_id: museum.id)
+museums.each do |museum|
+  found = Museum.find_by(rates: museum["rates"])
+    Special.create!(
+      description: museum["specials"],
+      museum_id: found.id)
 end
-
