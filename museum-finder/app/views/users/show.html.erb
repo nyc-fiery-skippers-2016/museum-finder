@@ -1,2 +1,8 @@
 user show
-<%= @user.email %>
+<%= @user.name %>'s Favorites
+
+<ul>
+<% @user.favorite_museums.each do |museum| %>
+	<li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+<%end%>
+</ul>
