@@ -12,4 +12,9 @@ class Museum < ActiveRecord::Base
   	self.favorites.find_by(user_id: current_user.id) ? true : false
   end
 
+  def format_hours
+    formatted = eval(self.opening_hours)
+    formatted["weekday_text"]
+  end
+
 end
