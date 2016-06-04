@@ -66,7 +66,6 @@ childrensArray21 = [7,9]
 culturalArray22 = [3,12,17,18,19,23,25,28,35,42]
 outdoorArray32 = [5,6,16,31,35,40,45]
 
-
 artArray1.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 1)
 end
@@ -87,16 +86,10 @@ culturalArray22.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 22)
 end
 
-
 outdoorArray32.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 32)
 end
 
-
-
-
-
->>>>>>> e0ce2486d27a07d7cb2a0438ba2b76777193adbb
 
 
 
