@@ -90,6 +90,33 @@ outdoorArray32.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 32)
 end
 
+#create users
 
+users = [
+  {name: "kat", email: "kat@example.com", password: "password"},
+  {name: "sibel", email: "sibel@example.com", password: "password"},
+  {name: "brian", email: "brian@example.com", password: "password"}
+]
+
+users.each { |user| User.create!(user)}
+
+#create favorites
+
+userfav1 = [1, 10, 2, 16, 9, 12, 5, 45]
+userfav2 = [15, 24, 27, 31, 7, 35, 16, 39]
+userfav3 = [22, 26, 29, 42, 43, 18, 28, 25]
+
+userfav1.each do |museumId|
+  Favorite.create!(user_id: 1, museum_id: museumId)
+end
+
+userfav2.each do |museumId|
+  Favorite.create!(user_id: 2, museum_id: museumId)
+end
+
+userfav3.each do |museumId|
+  Favorite.create!(user_id: 3,
+    museum_id: museumId)
+end
 
 
