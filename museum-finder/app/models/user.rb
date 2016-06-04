@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :favorite_museums, through: :favorites, source: :museum
 
+  validates_presence_of :name
+
 end
