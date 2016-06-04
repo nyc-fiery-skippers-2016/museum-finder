@@ -55,11 +55,29 @@
   </div>
 
   <div class="small-4 columns">
-    <h4>Admission</h4></br>
-    <h4>Specials<h4>
+    <div class="row">
+      <div class="small-12">
+        <h4>Admission</h4></br>
+         <%= @museum.rates %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12">
+        <h4>Specials<h4></br>
+      </div>
+    </div>
   </div>
 
   <div class="small-4 columns">
-    <h4>Contact</h4>
+
+    <div class="row">
+      <div class="small-12">
+        <h4>Contact</h4></br>
+        <%= @museum.formatted_address %></br>
+        <%= @museum.formatted_phone_number %></br>
+      </div>
+    </div>
+
   </div>
+
 </div>
