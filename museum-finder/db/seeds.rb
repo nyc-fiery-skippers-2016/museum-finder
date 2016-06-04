@@ -48,6 +48,14 @@ cleaned_museum_data.each_with_index do |museum, idx|
     rates: museums[idx]["rates"])
 end
 
+#museum free data
+
+freeArray = [2, 8, 10, 24, 20, 26, 27, 28, 37, 43]
+
+freeArray.each do |museumId|
+  Museum.find(museumId).update_attributes!(is_free: "true")
+end
+
 #create categories
 
 categories = ["Art", "Classic Art", "Decorative/Design", "Modern/Contemporary", "Film/Photography", "Sculpture", "Textile", "Architecture", "History", "Natural History/Science", "Historic Homes", "Sports", "Military/Police", "Science", "Technology", "Media", "Transportation", "Maritime", "Zoo", "Garden", "Children's", "Cultural", "Memorial", "African American", "Local", "Jewish", "Native American", "Regional", "Amusement", "Religious", "Music", "Outdoor"]
@@ -117,7 +125,7 @@ userfav3.each do |museumId|
     museum_id: museumId)
 end
 
-#create specials
+#create specials - FIX - need to find each museum by museum.rates and then set museum.specials
 
 Museum.all.each_with_index do |museum, idx|
   Special.create!(
