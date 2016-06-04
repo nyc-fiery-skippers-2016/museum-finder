@@ -5,33 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 <body>
 
-<div class="top-bar horizontal" data-topbar role="navigation" id="top-bar">
-  <div class="top-bar-left">
+<header>
+  <nav>
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="">
+      <button class="menu-icon slide-down-menu-button" type="button" data-toggle></button>
+      <div class="title-bar-title"><a href="/">LOGO</a></div>
+      <div class="title-bar-title"><a href="/">IMAGE</a></div>
 
-  <ul class="title-area menu">
-    <li class="toggle-topbar menu-icon"><a href="#"></a></li>
-    <li class="name">
-      <a href="#">My Site</a>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-  </ul>
-  </div>
+    </div>
+    <div class="top-bar menu-to-expand" id="main-menu">
+      <div class="top-bar-left">
+        <ul class="vertical dropdown menu" data-dropdown-menu>
+            <li class="row"><a href="#">Login</a></li>
+            <li class="row"><a href="#">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-  <section class="top-bar-right horizontal">
-    <!-- Right Nav Section -->
-    <ul class="menu">
-      <%if signed_in?%>
-        <li class="active"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-      <%else%>
-        <li class="active"><%= link_to "Sign in", new_user_session_path %></li>
-        <li class="active"><%= link_to "Sign up", new_user_registration_path %></li>
-      <%end%>
-    </ul>
-  </section>
-</div>
+
 
 <%= yield %>
 
