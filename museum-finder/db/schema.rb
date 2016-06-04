@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20160603233429) do
   add_index "museums", ["name"], name: "index_museums_on_name", unique: true, using: :btree
 
   create_table "specials", force: :cascade do |t|
-    t.text     "description", null: false
+    t.text     "description"
     t.integer  "museum_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
