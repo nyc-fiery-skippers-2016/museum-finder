@@ -22,7 +22,7 @@
     </div>
     <div class="top-bar menu-to-expand" id="main-menu">
       <div class="top-bar-left">
-        <ul class="vertical dropdown menu" data-dropdown-menu>
+        <ul class="vertical dropdown menu" id="hamburger" data-dropdown-menu>
           <%if signed_in?%>
             <li class="row"><a href="#">Sign Out</a></li>
           <%else%>
@@ -34,8 +34,6 @@
     </div>
   </nav>
 </header>
-
-
 
 <%= yield %>
 

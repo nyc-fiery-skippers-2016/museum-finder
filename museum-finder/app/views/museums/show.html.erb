@@ -1,0 +1,33 @@
+<% if @museum.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@museum.errors.count, "error") %></h2>
+    <ul>
+    <% @museum.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="small-5 columns">
+    <img src="https://maps.google.com/maps/contrib/110968035095085826734/photos\">
+  </div>
+  <div class="small-7 columns">
+    <h3><%= @museum.name.upcase %></h3></br>
+    <img src="#"><img src="#"><img src="#">
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <h4>Hours:</h4>
+  </div>
+  <div class="small-4 columns">
+    <h4>Admission</h4></br>
+    <h4>Specials<h4>
+  </div>
+  <div class="small-4 columns">
+    <h4>Contact</h4>
+  </div>
+</div>
