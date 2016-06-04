@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :favorites
-  has_many :favorited_museums, through: :favorites, source: :musuem
+  has_many :favorite_museums, through: :favorites, source: :museum
 
 end
