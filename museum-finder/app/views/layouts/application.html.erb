@@ -5,15 +5,37 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 <body>
 
-<%if signed_in?%>
-	<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-<%else%>
-	<li><%= link_to "Sign in", new_user_session_path %></li>
-	<li><%= link_to "Sign up", new_user_registration_path %></li>
-<%end%>
+<header>
+  <nav>
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="">
+      <button class="menu-icon slide-down-menu-button" type="button" data-toggle></button>
+      <div class="title-bar-title"><a href="/">LOGO</a></div>
+      <div class="title-bar-title"><a href="/">IMAGE</a></div>
+
+    </div>
+    <div class="top-bar menu-to-expand" id="main-menu">
+      <div class="top-bar-left">
+        <ul class="vertical dropdown menu" data-dropdown-menu>
+          <%if signed_in?%>
+            <li class="row"><a href="#">Sign Out</a></li>
+          <%else%>
+            <li class="row"><a href="#">Login</a></li>
+            <li class="row"><a href="#">Register</a></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
 
 <%= yield %>
 
