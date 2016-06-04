@@ -12,8 +12,6 @@ converted_data = Crack::XML.parse(data)
 
 museums = converted_data['museums']['museum']
 
-
-
 @client = GooglePlaces::Client.new("AIzaSyAuZ_wtI3N7LcecgNJ_sJVq_Aun5WB9W10")
 
 queried_museums = museums.map do |museum|
@@ -119,4 +117,11 @@ userfav3.each do |museumId|
     museum_id: museumId)
 end
 
+#create specials
+
+Museum.all.each_with_index do |museum, idx|
+  Special.create!(
+    description: museums[idx]["specials"],
+    museum_id: museum.id)
+end
 
