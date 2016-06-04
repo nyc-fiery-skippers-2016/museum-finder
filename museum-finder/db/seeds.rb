@@ -90,6 +90,15 @@ outdoorArray32.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 32)
 end
 
+#create users
+
+users = [
+  {name: "kat", email: "kat@example.com", password: "password"},
+  {name: "sibel", email: "sibel@example.com", password: "password"},
+  {name: "brian", email: "brian@example.com", password: "password"}
+]
+
+users.each { |user| User.create!(user)}
 
 
 
