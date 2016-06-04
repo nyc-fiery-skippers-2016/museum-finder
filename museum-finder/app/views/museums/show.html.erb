@@ -14,9 +14,22 @@
     <%= image_tag "american_folk_art.jpg" %>
   </div>
   <div class="small-7 columns">
-    <h3><%= @museum.name.upcase %></h3></br>
-    <i class="fi-star"></i>
-    <img src="#"><img src="#"><img src="#">
+    <div class="row">
+      <div class="small-12">
+        <h3><%= @museum.name.upcase %></h3></br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <i class="fi-star"></i>
+      </div>
+      <div class="small-4 columns">
+        <i class="fi-clock"></i>
+      </div>
+      <div class="small-4 columns">
+        <i class="fi-star"></i>
+      </div>
+    </div>
   </div>
 </div>
 
