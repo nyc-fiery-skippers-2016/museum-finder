@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   # create and destroy favorite
   resources :favorites, only: [:create, :destroy]
 
+  # create route for search
+  get 'search' => 'search#index', as: :search
+
   # devise takes care of users sessions and create
 
 
