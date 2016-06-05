@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
+
     respond_to do |format|
       format.html
       format.json { render json: @categories }
@@ -18,6 +19,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by(id: params[:id])
+    @favorite = Favorite.new
   end
 
 end

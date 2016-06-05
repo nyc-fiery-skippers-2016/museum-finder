@@ -9,7 +9,7 @@
 <% end %><br>
 Open: <br>
 <% if signed_in? %>
-Favorite: <%=museum.is_favorite?(current_user)%> <br>
+Favorite: <%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
 <% else %>
 Favorite: Register or Login
 <% end %>
