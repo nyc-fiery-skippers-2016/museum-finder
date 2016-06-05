@@ -8,6 +8,7 @@
 		  <%= f.hidden_field :user_id, value: current_user.id %>
 		  <%= f.hidden_field :museum_id, value: museum.id %>
 		  <%= f.submit 'Favorite' %>
+		<%end%>
 	<%end%>
 <%else%>
 	redirect to sign up
