@@ -28,6 +28,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.check_box :monthly_email, {}, true %>
+    <%= f.label :monthly_email, "I would like to receive a monthly email detailing specials of museums I've favorited." %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

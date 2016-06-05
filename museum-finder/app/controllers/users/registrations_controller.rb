@@ -9,8 +9,10 @@ before_action :configure_sign_up_params, only: [:create]
 
   # POST /resource
   def create
+    binding.pry
     super
-    current_user.update_attributes(name: params[:user][:name])
+    current_user.update_attributes(name: params[:user][:name], monthly_email: params[:user][:monthly_email])
+    # current_user.update_attributes()
     end
   end
 
@@ -46,7 +48,7 @@ before_action :configure_sign_up_params, only: [:create]
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :password_confirmation, :monthly_email])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
