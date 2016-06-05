@@ -1,0 +1,9 @@
+<ul class="results">
+  <% if @results.blank? %>
+    <li><i>No Museums Found</i></li>
+  <% else %>
+    <% @results.each do |result| %>
+      <%= render partial: "./museum_card", locals: {museum: result} %><br>
+    <% end %>
+  <% end %>
+</ul>
