@@ -15,6 +15,7 @@ class CategoriesController < ApplicationController
     @childrens = Category.find_by(name: "Children's")
     @cultural = Category.find_by(name: "Cultural")
     @outdoor = Category.find_by(name: "Outdoor")
+    @favorite = Favorite.new
   end
 
   def show
