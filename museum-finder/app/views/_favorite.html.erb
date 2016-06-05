@@ -1,13 +1,15 @@
 
 <% if signed_in? %>
 	<% if museum.is_favorite?(current_user) %>
-		<%= link_to "Unfavorite", favorite_path(Favorite.find_by(museum_id: museum.id, user_id: current_user.id)), method: :delete %> </p>
+		<%= link_to ("&#9733;".html_safe), favorite_path(Favorite.find_by(museum_id: museum.id, user_id: current_user.id)), method: :delete %> </p>
 
 	<%else%>
 	<%= form_for favorite, method: :create do |f| %>
 		  <%= f.hidden_field :user_id, value: current_user.id %>
 		  <%= f.hidden_field :museum_id, value: museum.id %>
-		  <%= f.submit 'Favorite' %>
+		  <%= button_tag(type:"submit") do%>
+		  	&#9734;
+		  <%end%>
 		<%end%>
 	<%end%>
 <%else%>
