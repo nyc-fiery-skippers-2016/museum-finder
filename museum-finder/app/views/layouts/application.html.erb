@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,12 +24,13 @@
     </div>
     <div class="top-bar menu-to-expand" id="main-menu">
       <div class="top-bar-left">
-        <ul class="vertical dropdown menu" data-dropdown-menu>
+        <ul class="vertical dropdown menu" id="hamburger" data-dropdown-menu>
           <%if signed_in?%>
-            <li class="row"><a href="#">Sign Out</a></li>
+            <li class="row"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+            <li class="row"><%= link_to 'Favorites', user_path(current_user.id)%></li>
           <%else%>
-            <li class="row"><a href="#">Login</a></li>
-            <li class="row"><a href="#">Register</a></li>
+            <li class="row"><%= link_to "Sign in", new_user_session_path %></li>
+            <li class="row"><%= link_to "Sign up", new_user_registration_path %></li>
           <%end%>
         </ul>
       </div>
@@ -35,9 +38,8 @@
   </nav>
 </header>
 
-
-
 <%= yield %>
 
 </body>
+<div id="footer">Footer</div>
 </html>

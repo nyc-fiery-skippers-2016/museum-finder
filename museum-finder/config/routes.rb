@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   # categories has an index of categories & a show with the list of museums within category
+  get 'categories/home' => 'categories#home'
+
   resources :categories, only: [:index, :show]
+
 
   # museum has show page with museum info
   resources :museums, only: [:show]

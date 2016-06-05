@@ -1,0 +1,86 @@
+<% if @museum.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@museum.errors.count, "error") %></h2>
+    <ul>
+    <% @museum.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="small-5 columns">
+    <%= image_tag "american_folk_art.jpg" %>
+  </div>
+  <div class="small-7 columns">
+    <div class="row">
+      <div class="small-12">
+        <h3><%= @museum.name.upcase %></h3></br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 blank-row">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="row icon-row">
+      <div class="small-4 columns icons">
+        <i class="fi-dollar style10"></i>
+      </div>
+      <div class="small-4 columns icons">
+        <i class="fi-clock style5"></i>
+      </div>
+      <div class="small-4 columns icons">
+        <i class="fi-star style2 "></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <div class="row">
+      <div class="small-12">
+        <h4>Hours:</h4>
+      </div>
+    </div>
+    <% @museum.format_hours.each do |hours| %>
+      <div class="row">
+        <div class="small-12">
+          <%= hours %>
+        </div>
+      </div>
+    <%end%>
+  </div>
+
+  <div class="small-4 columns">
+    <div class="row">
+      <div class="small-12">
+        <h4>Admission</h4></br>
+         <%= @museum.rates %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12">
+        <h4>Specials<h4></br>
+          <% @museum.specials.each do |special| %>
+          <%= special.description %>
+      </div>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="small-4 columns">
+
+    <div class="row">
+      <div class="small-12">
+        <h4>Contact</h4></br>
+        <%= @museum.formatted_address %></br>
+        <%= @museum.formatted_phone_number %></br>
+      </div>
+    </div>
+
+  </div>
+
+</div>
