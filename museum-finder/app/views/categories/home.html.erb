@@ -1,0 +1,43 @@
+<p>Category Home Page</p>
+
+<h3><%= @art.name %> Museums </h3>
+<ul>
+  <% @art.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
+
+<h3><%= @history.name %> Museums </h3>
+<ul>
+  <% @history.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
+
+<h3><%= @science.name %> Museums</h3>
+<ul>
+  <% @science.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
+
+<h3><%= @childrens.name %> Museums </h3>
+<ul>
+  <% @childrens.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
+
+<h3><%= @cultural.name %> Museums </h3>
+<ul>
+  <% @cultural.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
+
+<h3><%= @outdoor.name %> Museums </h3>
+<ul>
+  <% @outdoor.museums.each do |museum| %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+  <% end %>
+</ul>
