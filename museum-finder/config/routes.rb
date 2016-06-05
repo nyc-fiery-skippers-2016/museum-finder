@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # museum has show page with museum info
   resources :museums, only: [:show]
 
+  # create and destroy favorite
+  resources :favorites, only: [:create, :destroy]
+
   # devise takes care of users sessions and create
 
 
