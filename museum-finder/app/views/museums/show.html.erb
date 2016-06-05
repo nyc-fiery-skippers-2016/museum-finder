@@ -64,10 +64,9 @@
     <div class="row">
       <div class="small-12">
         <h4>Specials<h4></br>
-          <% @museum.specials.each do |special| %>
-          <%= special.description %>
+        <p class="specials"><%= @museum.specials.first.description %></p>
       </div>
-      <%end%>
+
     </div>
   </div>
 
