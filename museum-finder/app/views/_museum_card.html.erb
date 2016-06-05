@@ -8,9 +8,5 @@
   Cost: $$
 <% end %><br>
 Open: <br>
-<% if signed_in? %>
 <%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
-<% else %>
-Favorite: Register or Login
-<% end %>
 </div>
