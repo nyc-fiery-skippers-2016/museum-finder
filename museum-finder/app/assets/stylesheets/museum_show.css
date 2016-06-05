@@ -1,0 +1,31 @@
+.icons{
+  font-size: 300%;
+}
+
+.style2 {
+
+    color: white;
+    text-shadow: 0px 1px 0px #0092b3,0px 2px 0px #0087a6,0px 3px 0px #008099,0px 4px 0px #00758c,0px 5px 0px #555,0px 6px 0px #006a80,0px 0px 0px #006073,0px 8px 7px #005566;
+    border
+  }
+
+.style5 {
+
+    color: rgba(245,159,26,0.8);
+    text-shadow: 1px 4px 6px #FFF,0 0 0 #000,1px 4px 6px #FFF;
+}
+
+.style10 {
+    color: #019875;
+    text-shadow: 0px 1px 0px black,0px 2px 0px black,0px 3px 0px black,0px 4px 0px green,0px 5px 0px green,0px 6px 0px green,0px 0px 0px green,0px 8px 7px green;
+}
+
+.icon-row{
+  position:relative;
+
+}
+
+.blank-row{
+  position: relative;
+  height:2em;
+}
