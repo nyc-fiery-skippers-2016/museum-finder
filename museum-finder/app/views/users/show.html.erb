@@ -3,6 +3,6 @@ user show
 
 <ul>
 <% @user.favorite_museums.each do |museum| %>
-	<li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
+	<li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
 <%end%>
 </ul>
