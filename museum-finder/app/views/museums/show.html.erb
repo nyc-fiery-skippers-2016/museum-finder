@@ -75,8 +75,8 @@
     <div class="row">
       <div class="small-12">
         <h4>Contact</h4></br>
-        <%= @museum.formatted_address %></br>
-        <%= @museum.formatted_phone_number %></br>
+        <%= link_to @museum.formatted_address, @museum.google_address_link %><br>
+        Phone:<%= @museum.formatted_phone_number %></br>
       </div>
     </div>
 

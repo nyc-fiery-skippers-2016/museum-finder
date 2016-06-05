@@ -17,4 +17,9 @@ class Museum < ActiveRecord::Base
     formatted["weekday_text"]
   end
 
+  def google_address_link
+    address = (self.name).split.join("+")
+    return "https://www.google.com/maps/place/#{address}"
+  end
+
 end
