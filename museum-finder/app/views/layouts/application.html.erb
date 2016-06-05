@@ -28,6 +28,7 @@
           <%if signed_in?%>
             <li class="row"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             <li class="row"><%= link_to 'Favorites', user_path(current_user.id)%></li>
+            <li class="row"><%= link_to 'Profile', edit_user_registration_path(current_user.id)%></li>
           <%else%>
             <li class="row"><%= link_to "Sign in", new_user_session_path %></li>
             <li class="row"><%= link_to "Sign up", new_user_registration_path %></li>
