@@ -11,7 +11,6 @@ before_action :configure_sign_up_params, only: [:create]
   def create
     super
     current_user.update_attributes(name: params[:user][:name], monthly_email: params[:user][:monthly_email])
-    end
   end
 
   # GET /resource/edit
@@ -48,7 +47,7 @@ before_action :configure_sign_up_params, only: [:create]
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: (:sign_up, keys: [:name, :email, :password, :password_confirmation, :current_password, :monthly_email])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :email, :password, :password_confirmation, :current_password, :monthly_email])
   end
 
   # The path used after sign up.
