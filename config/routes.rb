@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   resources :museums, only: [:show]
 
   # create and destroy favorite
-  resources :favorites, only: [:create, :destroy]
-
+  # resources :favorites, only: [:create, :destroy]
+  post '/favorite_museum' => 'favorites#create', as: :favorite
+  delete '/unfavorite_museum' => 'favorites#destroy', as: :unfavorite
   # create route for search
   get 'search' => 'search#index', as: :search
 
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   root :to => 'categories#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
