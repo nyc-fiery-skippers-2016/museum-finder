@@ -3,7 +3,7 @@
     <li><i>No Museums Found</i></li>
   <% else %>
     <% @results.each do |result| %>
-      <%= render partial: "./museum_card", locals: {museum: result} %><br>
+      <%= render partial: "./museum_card", locals: {museum: result, favorite: @favorite} %><br>
     <% end %>
   <% end %>
 </ul>

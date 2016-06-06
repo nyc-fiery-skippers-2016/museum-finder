@@ -1,7 +1,7 @@
 <div class="star">
 	<% if signed_in? %>
 		<% if museum.is_favorite?(current_user) %>
-			<%= link_to ("&#9733;".html_safe), favorite_path(Favorite.find_by(museum_id: museum.id, user_id: current_user.id)), method: :delete %> </p>
+			<%= link_to ("&#9733;".html_safe), favorite_path(Favorite.find_by(museum_id: museum.id, user_id: current_user.id)), method: :delete,class:"star"%> </p>
 
 		<%else%>
 		<%= form_for favorite, method: :create do |f| %>
