@@ -1,0 +1,20 @@
+<h4>Free Museums</h4>
+
+<ul>
+<% if Category.free_museums(category).empty? %>
+  <p>No Free Museums</p>
+<% else %>
+  <% Category.free_museums(category).each do |museum| %>
+    <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<h4>$$ Museums</h4>
+
+<ul>
+<% Category.cost_museums(category).each do |museum|
+  %>
+  <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+<% end %>
+</ul>

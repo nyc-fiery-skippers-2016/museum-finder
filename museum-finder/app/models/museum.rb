@@ -25,18 +25,6 @@ class Museum < ActiveRecord::Base
     return "https://www.google.com/maps/place/#{address}"
   end
 
-  def self.free_museums(category)
-    self.where(category: category, is_free: "true")
-  end
-
-  def self.cost_museums(category)
-    self.where(category: category, is_free: nil)
-  end
-
-  def self.favorite_museums(category)
-    self.favorites.where(category: category)
-  end
-
   def hours_today
     opening_hours.each do |day|
       if day.include?(Date.today.strftime("%A"))
