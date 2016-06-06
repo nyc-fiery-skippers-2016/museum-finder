@@ -19,5 +19,5 @@ class FavoritesController < ApplicationController
    		render plain: "Whatchoo doing. Ain't no fave there!"
    	end
   end
-
+    
 end
