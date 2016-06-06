@@ -45,13 +45,17 @@
         <h4>Hours:</h4>
       </div>
     </div>
-    <% @museum.format_hours.each do |hours| %>
-      <div class="row">
-        <div class="small-12">
-          <%= hours %>
+    <% if @museum.opening_hours.empty? %>
+      <p>No Hours Available</p>
+    <% else %>
+      <% @museum.opening_hours.each do |hours| %>
+        <div class="row">
+          <div class="small-12">
+            <%= hours %>
+          </div>
         </div>
-      </div>
-    <%end%>
+      <%end%>
+      <% end %>
   </div>
 
   <div class="small-4 columns">

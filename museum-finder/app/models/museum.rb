@@ -8,13 +8,16 @@ class Museum < ActiveRecord::Base
   has_many :favorites
   has_many :users,  through: :favorites
 
-  def is_favorite?(current_user)
-  	self.favorites.find_by(user_id: current_user.id) ? true : false
+  def opening_hours
+    if super == nil
+      return []
+    else
+      eval(super)["weekday_text"]
+    end
   end
 
-  def format_hours
-    formatted = eval(self.opening_hours)
-    formatted["weekday_text"]
+  def is_favorite?(current_user)
+  	self.favorites.find_by(user_id: current_user.id) ? true : false
   end
 
   def google_address_link
@@ -32,5 +35,13 @@ class Museum < ActiveRecord::Base
 
   def self.favorite_museums(category)
     self.favorites.where(category: category)
+  end
+
+  def hours_today
+    opening_hours.each do |day|
+      if day.include?(Date.today.strftime("%A"))
+        return day
+      end
+    end
   end
 end
