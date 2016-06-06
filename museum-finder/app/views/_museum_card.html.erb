@@ -7,7 +7,11 @@
 <% else %>
   Cost: $$
 <% end %><br>
-Open: <br>
+<% if museum.opening_hours.empty? %>
+  <p>No Hours Available </p>
+<% else %>
+  Hours for <%= museum.hours_today %><br>
+<% end %>
 <% if signed_in? %>
 Favorite: <%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
 <% else %>
