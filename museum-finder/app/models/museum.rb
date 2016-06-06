@@ -32,5 +32,4 @@ class Museum < ActiveRecord::Base
       end
     end
   end
-
 end

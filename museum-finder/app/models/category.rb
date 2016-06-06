@@ -3,10 +3,13 @@ class Category < ActiveRecord::Base
 
   has_many :museum_categories
   has_many :museums, through: :museum_categories
-end
 
-# def self.top_six
-#   top_six= ["Art", ""]
-#   array = [self.name == "Art", self.name == ]
-# end
+  def free_museums
+    museums.where(is_free: "true")
+  end
+
+   def cost_museums
+    museums.where(is_free: nil)
+  end
+end
 

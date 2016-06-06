@@ -1,5 +1,7 @@
-<p>Individual Category Show</p>
+<h3><%= @category.name %> Museums </h3>
 
 <% @category.museums.each do |museum| %>
-	<li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+  <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
 <%end%>
+
+<%= render partial: "./museum_sorting", locals: { category: @category } %>
