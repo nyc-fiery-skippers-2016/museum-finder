@@ -2,6 +2,6 @@
 
 <% @category.museums.each do |museum| %>
   <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
-
-  <%= render partial: "./museum_sorting", locals: { category: @category } %>
 <%end%>
+
+<%= render partial: "./museum_sorting", locals: { category: @category } %>
