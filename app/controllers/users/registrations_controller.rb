@@ -11,7 +11,6 @@ before_action :configure_sign_up_params, only: [:create]
   def create
     super
     current_user.update_attributes(name: params[:user][:name], monthly_email: params[:user][:monthly_email])
-    end
   end
 
   # GET /resource/edit
