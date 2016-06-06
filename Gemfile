@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 #Json gem
 # gem 'json'
+#rails12 factor gem
+gem 'rails_12factor', group: :production
+#puma gem
+gem 'puma'
 #gem for parsing xml NYC API
 gem 'crack'
 #API parsing gem
