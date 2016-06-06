@@ -30,7 +30,7 @@ cleaned_museum_data = full_museum_data.map do |museum|
   museum_hash[:lat] = museum.lat
   museum_hash[:lng] = museum.lng
   museum_hash[:opening_hours] = museum.opening_hours
-  museum_hash[:photos] = museum.photos
+  museum_hash[:photos] = @client.spot(museum.place_id).photos[0].fetch_url(800)
   museum_hash[:place_id] = museum.place_id
   museum_hash
 end
