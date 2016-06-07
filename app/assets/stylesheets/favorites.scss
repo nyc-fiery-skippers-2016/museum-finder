@@ -1,4 +1,29 @@
+
+.favorite a {
+	color: #A4D0C4;
+}
+
 .star {
-	width: 30px;
-	height: 30px;
+	padding: 0;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 45px;
+	font-family: Helvetica;
+}
+
+.unfilled-star {
+	color: #A4D0C4;
+}
+
+.unfilled-star:hover {
+	color: #00A4D3;
+}
+
+.filled-star {
+	color: #72c4b9;
+}
+
+.filled-star:hover {
+	color: #A4D0C4;
 }
