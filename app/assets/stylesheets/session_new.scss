@@ -1,0 +1,39 @@
+body{
+  background: url('/assets/guggenheim.jpg');
+  color:black;
+}
+
+.header{
+  visibility:hidden;
+
+}
+
+.lower{
+  position:relative;
+  text-align:center;
+  top:3em;
+  width:22%;
+  padding:3em;
+  border-radius:10px;
+  background-color: rgba(152, 196, 237, 0.96);
+}
+
+.email{
+  position:relative;
+  top:-2em;
+}
+
+.password{
+  position:relative;
+  top:-.5em;
+}
+
+.remember{
+  position:relative;
+  top:.25em;
+}
+
+.login{
+  position:relative;
+  top:1em;
+}
