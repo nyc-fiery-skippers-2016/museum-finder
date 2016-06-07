@@ -37,6 +37,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -46,8 +49,6 @@ gem 'devise'
 gem 'react-rails'
 
 gem 'google_places'
-
-gem 'foundation-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
