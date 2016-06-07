@@ -67,10 +67,34 @@
     </div>
     <div class="col-xs-4">
       <div class="row">
+        <div class="col-xs-12">
+          <h4>Admission</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <%= @museum.rates %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h4>Specials</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <%= @museum.specials.first.description %>
+        </div>
       </div>
     </div>
+
     <div class="col-xs-4">
+      <div class="row">
+        <div class="col-xs-12">
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
 
