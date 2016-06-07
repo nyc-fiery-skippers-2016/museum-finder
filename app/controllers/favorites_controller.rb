@@ -5,7 +5,7 @@ class FavoritesController < ApplicationController
    favorite = Favorite.find_or_create_by(user:current_user, museum: museum)
     if favorite.save
       if request.xhr?
-        render partial: 'favorite', layout: false
+        render partial: './favorite', layout: false, locals: {museum: museum, favorite: favorite}
       else
         redirect_to :back
       end
@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
   end
 
    def destroy
-   	fave = Favorite.find_by(user: current_user, museum_id: params[:favorite][:museum_id])
+    fave = Favorite.find_by(user: current_user, museum_id: params[:favorite][:museum_id])
    	if fave
    		fave.destroy
    		if request.xhr?
