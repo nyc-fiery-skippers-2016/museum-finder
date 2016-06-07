@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
-
+    # binding.pry
     respond_to do |format|
       format.html
       format.json { render json: @categories }
