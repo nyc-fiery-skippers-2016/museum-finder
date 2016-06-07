@@ -1,0 +1,55 @@
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.venue-box {
+  border: 3px solid #BB4F22;
+  padding: 2% 2% 4% 5%;
+  width: 40%;
+  margin: 2%;
+  display: inline-block;
+  flex-grow: 1;
+}
+.venue-box a:hover {
+  text-decoration: none;
+  color: #D95C27;
+}
+.venue-box ul {
+  list-style: none;
+}
+
+.black-box {
+  border: 1px solid black;
+}
+
+.venue-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.museum-box {
+  border: 1px solid #BB4F22;
+  padding: 1% 1% 1% 4%;
+  width: 39%;
+  margin: 2%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.home-image {
+  background-image: image-url("met_home.jpeg");
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -60px;
+  height: auto;
+  padding: bottom;
+}
