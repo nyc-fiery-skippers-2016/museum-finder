@@ -39,6 +39,7 @@ gem 'devise'
 
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
