@@ -1,17 +1,18 @@
-<div>
-<%= image_tag(museum.photos) %><br>
-<h3><%= link_to museum.name, museum_path(museum.id) %></h3>
-<%= link_to museum.formatted_address, museum.google_address_link %><br>
-<% if museum.is_free %>
-  Cost: Free!
-<% else %>
-  Cost: $$
-<% end %><br>
-<% if museum.opening_hours.empty? %>
-  <p>No Hours Available </p>
-<% else %>
-  Hours for <%= museum.hours_today %><br>
-<% end %>
-Favorite: <%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
+<div class="card">
+	<%= image_tag(museum.photos, class:"img-rounded pull-xs-left card-img") %><br>
+	<div class="card-text">
+			<h3><%= link_to museum.name, museum_path(museum.id) %></h3>
+			<address><%= link_to museum.formatted_address, museum.google_address_link %><br></address>
+			<% if museum.is_free %>
+			  Cost: Free!
+			<% else %>
+			  Cost: $$
+			<% end %><br>
+			<% if museum.opening_hours.empty? %>
+			  <p>No Hours Available </p>
+			<% else %>
+			  Hours for <%= museum.hours_today %><br>
+			<% end %>
+			Favorite: <%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
+	</div>
 </div>
-
