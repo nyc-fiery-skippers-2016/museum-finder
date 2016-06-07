@@ -1,23 +1,23 @@
 $(document).ready(function() {
-  $('.filled-star').on('submit', function(e) {
+  $('.favorite').on('submit', ".filled-star", function(e) {
     e.preventDefault();
+    $(e.target).addClass("clicked");
     $.ajax({
-    	method: "DELETE",
+    	method: "delete",
     	url: "/unfavorite_museum",
     	data: $(e.target).serialize() 
     }).done(function(response) {
-    	debugger;
-    	// $('.filled-star').remove();
-    	// parent.append($(".unfilled-star"))
-    }).fail(function(response){
-    	console.log("FAIL: " + response)
+       	$('.clicked').parent().append(response);
+       	$('.clicked').remove();
+
     });
  });
 
-  $('.unfilled-star').on('submit', function(e) {
+
+  $('.favorite').on('submit', ".unfilled-star", function(e) {
     e.preventDefault();
-    // debugger;
-    $(e.target).addClass("clicked")
+    $(e.target).addClass("clicked");
+    $(e.target).addClass("filled-star");
     $target = (e.target)
     $.ajax({
     	method: "post",
@@ -26,8 +26,7 @@ $(document).ready(function() {
     }).done(function(response) {
     	$('.clicked').parent().append(response);
     	$('.clicked').remove();
-    	// parent.append($(".filled-star"))
-    });
+   });
  });
 });
  
