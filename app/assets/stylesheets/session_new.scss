@@ -1,0 +1,38 @@
+
+.header{
+  position:relative;
+  text-align:center;
+  font-size:3em;
+
+}
+
+.lower{
+  position:relative;
+  text-align:center;
+  top:5em;
+  width:22%;
+  padding:3em;
+  padding-bottom:6em;
+  border-radius:10px;
+  background-color: rgba(114, 196, 185, 0.96);
+}
+
+.email{
+  position:relative;
+  top:-.5em;
+}
+
+.password{
+  position:relative;
+  top:1em;
+}
+
+.remember{
+  position:relative;
+  top:2.25em;
+}
+
+.login{
+  position:relative;
+  top:3em;
+}
