@@ -5,9 +5,12 @@ class Category < ActiveRecord::Base
   has_many :museums, through: :museum_categories
 
   def free_museums
+    # PANSAMPANSAM
+    # it's a bit of an antipattern to hold booleans as strings in the DB
     museums.where(is_free: "true")
   end
-
+  # PANSAMPANSAM
+  # indenting off here
    def cost_museums
     museums.where(is_free: nil)
   end
