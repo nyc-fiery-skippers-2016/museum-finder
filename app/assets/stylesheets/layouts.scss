@@ -44,6 +44,11 @@
   flex-grow: 1;
 }
 
+.padded-nav {
+  padding-top: 2%;
+  font-size: large;
+}
+
 .home-image {
   background-image: image-url("met_home.jpeg");
   background-size: cover !important;
