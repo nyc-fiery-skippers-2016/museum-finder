@@ -1,9 +1,9 @@
-var Container = React.createClass ({
-  render: function() {
-    return (
-      <section className="container">
-        <CategoryContainer/>
-      </section>
-      )
-  }
-})
+// var Container = React.createClass ({
+//   render: function() {
+//     return (
+//       <section className="container">
+//         <CategoryContainer/>
+//       </section>
+//       )
+//   }
+// })

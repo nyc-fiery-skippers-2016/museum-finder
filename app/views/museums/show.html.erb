@@ -20,21 +20,21 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <h3><%= @museum.name.upcase %></h3></br>
+          <h3 style="position:relative; text-align: center"><%= @museum.name.upcase %></h3></br>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-4">
+        <div style="position:relative; text-align: center" class="col-xs-4">
+          <i  class="fi-dollar style10"></i>
+        </div>
+
+        <div style="position:relative; text-align: center" class="col-xs-4">
           <i class="fi-dollar style10"></i>
         </div>
 
-        <div class="col-xs-4">
-          <i class="fi-dollar style10"></i>
-        </div>
-
-        <div class="col-xs-4">
-          <i class="fi-dollar style10"></i>
+        <div style="position:relative; text-align: center" class="col-xs-4">
+          <i class="fi-dollar style10" ></i>
         </div>
       </div>
     </div>
@@ -45,19 +45,19 @@
   <div class="row">
     <div class="col-xs-4">
       <div class="row">
-        <div class="col-xs-12 museum-details">
-          <h4>Hours</h4>
+        <div class="col-xs-12">
+          <h4 style="position:relative; text-align: center">Hours</h4>
         </div>
       </div>
       <div class="row">
       <% if @museum.opening_hours.empty? %>
         <div class="col-xs-12">
-          <p>No Hours Available</p>
+          <p style="position:relative; text-align: center">No Hours Available</p>
         </div>
         <%else%>
         <% @museum.opening_hours.each do |hours| %>
          <div class="col-xs-12">
-          <%= hours %>
+          <p style="position:relative; text-align: center"><%= hours %></p>
         </div>
         <%end%>
         <%end%>
@@ -66,7 +66,7 @@
     <div class="col-xs-4">
       <div class="row">
         <div class="col-xs-12">
-          <h4>Admission</h4>
+          <h4 style="position:relative; text-align: center">Admission</h4>
         </div>
       </div>
       <div class="row">
@@ -76,7 +76,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <h4>Specials</h4>
+          <h4 style="position:relative; text-align: center">Specials</h4>
         </div>
       </div>
       <div class="row">
@@ -89,7 +89,7 @@
     <div class="col-xs-4">
       <div class="row">
         <div class="col-xs-12">
-          <h4>Contact</h4>
+          <h4 style="position:relative; text-align: center">Contact</h4>
         </div>
       </div>
       <div class="row">
@@ -99,7 +99,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          Phone:<%= @museum.formatted_phone_number %>
+          <p style="position:relative; text-align: center">Phone:<%= @museum.formatted_phone_number %></p>
         </div>
       </div>
     </div>
