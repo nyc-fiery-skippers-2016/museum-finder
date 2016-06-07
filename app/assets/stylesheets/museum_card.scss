@@ -1,0 +1,23 @@
+.card {
+	display: inline-flex;
+	outline: 10px solid black;
+	outline-style: 10px;
+	margin: 20px;
+	background: #FEFEE7;
+}
+
+.card-img {
+	width: 350px;
+	height: 350px;
+	margin: 10px;
+	background-size: cover;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.card-text {
+	display: inline-block;
+	text-align: center;
+	margin: 10px;
+}
+
