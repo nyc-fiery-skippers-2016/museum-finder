@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function () {
+    $('div.hidden').fadeIn(1000).removeClass('hidden');
+});
+$(document).on('page:load', function () {
+    $('div.hidden').fadeIn(1000).removeClass('hidden');
+});
+$(document).on('turbolinks:load', function () {
+    $('div.hidden').fadeIn(1000).removeClass('hidden');
+});
