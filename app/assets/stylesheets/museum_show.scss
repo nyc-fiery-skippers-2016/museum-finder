@@ -1,38 +1,3 @@
-.outline{
-  position:relative;
-  width:95%;
-  left:2%;
-  border:5px solid teal;
-  height: 605px;
-  background-color: #FEFEE7;
-
-}
-
-
-.glyphicon{
-    color:teal;
-    font-size: 5em;
-}
-
-.glyphicon:hover{
-    font-weight: bolder;
-}
-
-.style3 {
-  color: teal;
-    text-shadow: 1px 4px 6px #FFF,0 0 0 #000,1px 4px 6px #FFF;
-}
-
-.style5 {
-    color: rgba(245,159,26,0.8);
-    text-shadow: 1px 4px 6px #FFF,0 0 0 #000,1px 4px 6px #FFF;
-}
-
-.style7 {
-    color: rgba(51, 153, 102,0.8);
-    text-shadow: 1px 4px 6px #FFF,0 0 0 #000,1px 4px 6px #FFF;
-}
-
 .icons{
   font-size: 300%;
 }
@@ -59,37 +24,11 @@
 
 }
 
+.blank-row{
+  position: relative;
+  height:2em;
+}
+
 .specials{
   font-size: .76em;
 }
-
-.photo img {
-  position:relative;
-  top:5px;
-  height: 300px;
-  left:13%;
-  border-radius: 10px;
-}
-
-.title{
-  position:relative;
-  right:6%;
-}
-
-.icon-row{
-  position:relative;
-  top:4em;
-}
-
-.hours{
-
-top:-15px;
-}
-
-
-/*.photo{*/
-  /*position:relative;*/
-  /*img {*/
-    /*height:300px;*/
-  /*}*/
-/*}*/
