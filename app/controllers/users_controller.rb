@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 before_action :current_user
 
   def show
+    # PANSAMPANSAM
+    # indentation is off here
  	if user_signed_in?
  		id = current_user.id
 		@user = User.find_by(id: params[:id])

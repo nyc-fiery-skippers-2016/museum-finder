@@ -1,7 +1,11 @@
 class FavoritesController < ApplicationController
 
   def create
-  	museum = Museum.find_by(id: params[:favorite][:museum_id])
+    # PANSAMPANSAM
+    # You don't actually need to grab the museum object from the DB
+    # You can pass `museum_id` to the find_or_create straight from
+    # the params
+    museum = Museum.find_by(id: params[:favorite][:museum_id])
    favorite = Favorite.find_or_create_by(user:current_user, museum: museum)
     if favorite.save
       if request.xhr?
