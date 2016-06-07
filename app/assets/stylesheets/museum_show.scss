@@ -1,5 +1,6 @@
 
 
+
 .outline{
   position:relative;
   width:95%;
@@ -33,6 +34,7 @@
     color: rgba(51, 153, 102,0.8);
     text-shadow: 1px 4px 6px #FFF,0 0 0 #000,1px 4px 6px #FFF;
 }
+
 
 .icons{
   font-size: 300%;
@@ -101,3 +103,12 @@
     /*height:300px;*/
   /*}*/
 /*}*/
+
+.blank-row{
+  position: relative;
+  height:2em;
+}
+
+.specials{
+  font-size: .76em;
+}

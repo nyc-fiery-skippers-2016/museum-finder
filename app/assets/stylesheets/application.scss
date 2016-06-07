@@ -18,6 +18,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "museums";
+
 @import "categories";
 
 body { font-family: 'Muli', Arial, serif; font-weight: 400; }
+
+@import "favorites";
+
+

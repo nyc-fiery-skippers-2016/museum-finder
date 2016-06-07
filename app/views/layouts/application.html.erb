@@ -12,39 +12,39 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 </head>
-<body>
+<body class="Site">
 
-<header>
-  <nav>
-    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="">
-      <button class="menu-icon slide-down-menu-button" type="button" data-toggle></button>
-      <div class="title-bar-title"><a href="/">LOGO</a></div>
-      <div class="title-bar-title"><a href="/">IMAGE</a></div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand"
+        href="/">Museum Finder</a></div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Museums", categories_home_path %></li>
+        <li><%= link_to "Categories", categories_path%></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if signed_in? %>
+          <li><%= link_to 'Favorites', user_path(current_user.id)%></li>
+          <li><%= link_to 'Profile', edit_user_registration_path(current_user.id)%></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
 
-    <div id='search-form'>
-      <%= form_tag search_path, :method => 'get' do %>
-        <p>
-          <%= text_field_tag 'keyword', nil%>
-          <%= submit_tag "Search for Museum", :name => nil %>
-        </p>
-      <% end %>
-    </div>
-    </div>
-    <div class="top-bar menu-to-expand" id="main-menu">
-      <div class="top-bar-left">
-        <ul class="vertical dropdown menu" id="hamburger" data-dropdown-menu>
-          <%if signed_in?%>
-            <li class="row"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-            <li class="row"><%= link_to 'Favorites', user_path(current_user.id)%></li>
-            <li class="row"><%= link_to 'Profile', edit_user_registration_path(current_user.id)%></li>
-          <%else%>
-            <li class="row"><%= link_to "Sign in", new_user_session_path %></li>
-            <li class="row"><%= link_to "Sign up", new_user_registration_path %></li>
-          <%end%>
+        <% else %>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+
+        <%= form_tag search_path, :method => 'get', class: "navbar-form navbar-right" do %>
+            <p><%= text_field_tag 'keyword', nil, class: 'form-control'%>
+              <%= submit_tag "Search for Museum", :name => nil, class: "btn btn-success" %>
+            </p>
+          <% end %>
         </ul>
-      </div>
+    </div>
+  </nav>
+
+
     </div>
   </nav>
 </header>
