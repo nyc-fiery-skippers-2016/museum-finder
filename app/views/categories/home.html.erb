@@ -11,123 +11,87 @@
       <li><%= link_to "Outdoor", categories_home_path, :id => "outdoor" %></li>
     </ul>
 
-      <div id="art-category" class="category">
-            <h2 class="category-show-header">
-              <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-              <span>// Art</span>
-            </h2>
-      </div>
+      <div id="art-category" class="active category">
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+          <span>// Art</span>
+        </h2>
 
+
+      <div class="museums-container">
       <% @art.museums.each do |museum| %>
           <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
       <% end %>
+      </div>
+      </div>
 
       <div id="history-category" class="category">
-      <div class="venue-container">
-        <div class="venue-box black-box">
-          <h2 class="category-show-header">
-            <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-            <span class="splash-color">//</span> History
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+          <span class="splash-color">// History</span>
           </h2>
-        </div>
-      </div>
 
-      <div class="venue-container">
+      <div class="museums-container">
       <% @history.museums.each do |museum| %>
-        <div class="museum-box">
           <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
-        </div>
       <% end %>
-        <div class="museum-box">
-        <%= render partial: "./museum_sorting", locals: { category: @art } %>
-        </div>
       </div>
-    </div>
-
-    <div id="science-category" class="category">
-      <div class="venue-container">
-        <div class="venue-box black-box">
-          <h2 class="category-show-header">
-            <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-            <span class="splash-color">//</span> Science
-          </h2>
-        </div>
       </div>
 
-      <div class="venue-container">
+      <div id="science-category" class="category">
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+          <span class="splash-color">// Science</span>
+        </h2>
+
+
+      <div class="museums-container">
       <% @science.museums.each do |museum| %>
-        <div class="museum-box">
           <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
-        </div>
       <% end %>
-        <div class="museum-box">
-        <%= render partial: "./museum_sorting", locals: { category: @art } %>
-        </div>
       </div>
-    </div>
-
-    <div id="childrens-category" class="category">
-      <div class="venue-container">
-        <div class="venue-box black-box">
-          <h2 class="category-show-header">
-            <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-            <span class="splash-color">//</span> Children's
-          </h2>
-        </div>
       </div>
 
-      <div class="venue-container">
+      <div id="childrens-category" class="category">
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+          <span class="splash-color">// Children's</span>
+        </h2>
+
+
+      <div class="museum-container">
       <% @childrens.museums.each do |museum| %>
-        <div class="museum-box">
           <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
-        </div>
       <% end %>
-        <div class="museum-box">
-        <%= render partial: "./museum_sorting", locals: { category: @art } %>
-        </div>
       </div>
-    </div>
-
-    <div id="cultural-category" class="category">
-      <div class="venue-container">
-        <div class="venue-box black-box">
-          <h2 class="category-show-header">
-            <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-            <span class="splash-color">//</span> Cultural
-          </h2>
-        </div>
       </div>
 
-      <div class="venue-container">
+      <div id="cultural-category" class="category">
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+              <span class="splash-color">// Cultural</span>
+        </h2>
+
+
+      <div class="museums-container">
       <% @cultural.museums.each do |museum| %>
-        <div class="museum-box">
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
-        </div>
+        <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
       <% end %>
-        <div class="museum-box">
-        <%= render partial: "./museum_sorting", locals: { category: @art } %>
-        </div>
       </div>
     </div>
 
-    <div id="outdoor-category" class="category">
-      <div class="venue-container">
-        <div class="venue-box black-box">
-          <h2 class="category-show-header">
-            <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
-            <span class="splash-color">//</span> Outdoor
-          </h2>
-        </div>
-      </div>
+      <div id="outdoor-category" class="category">
+        <h2 class="category-show-header">
+          <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
+          <span class="splash-color">// Outdoor</span>
+        </h2>
 
-      <div class="venue-container">
+
+      <div class="museums-container">
       <% @outdoor.museums.each do |museum| %>
-        <div class="museum-box">
           <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
-        </div>
       <% end %>
-        <div class="museum-box">
-        <%= render partial: "./museum_sorting", locals: { category: @art } %>
-        </div>
       </div>
     </div>
+  </div>
+</main>
