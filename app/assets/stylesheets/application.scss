@@ -18,8 +18,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "museums";
-
 @import "categories";
 @import "favorites";
-
-body { font-family: 'Muli', Arial, serif; font-weight: 400; }
+@import "devise";
+body { font-family: 'Muli', Arial, serif; font-weight: 400;
+      background:none;
+ }
