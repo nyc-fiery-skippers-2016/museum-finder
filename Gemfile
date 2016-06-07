@@ -47,8 +47,6 @@ gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'react-rails'
-
 gem 'google_places'
 
 group :development, :test do
