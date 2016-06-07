@@ -11,12 +11,11 @@
       <li><%= link_to "Outdoor", categories_home_path, :id => "outdoor" %></li>
     </ul>
 
-      <div id="art-category" class="active category">
+      <div id="art-category" class="category">
         <h2 class="category-show-header">
           <span id="category-back-link"><%= link_to "Categories", categories_path, class: "category-show-header" %></span>
           <span>// Art</span>
         </h2>
-
 
       <div class="museums-container">
       <% @art.museums.each do |museum| %>
