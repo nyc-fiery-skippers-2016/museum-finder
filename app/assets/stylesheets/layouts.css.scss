@@ -1,0 +1,13 @@
+.Site-content {
+  flex: 1;
+}
+
+.home-image {
+  background-image: image-url("met_home.jpeg");
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -60px;
+  height: auto;
+  padding: bottom;
+}
