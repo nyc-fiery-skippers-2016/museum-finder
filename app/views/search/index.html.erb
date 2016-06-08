@@ -13,7 +13,7 @@
   <% else %>
     <% @results.each do |result| %>
     <div class="col-xs-6">
-      <%= render partial: "./museum_card", locals: {museum: result, favorite: @favorite} %>
+      <%= render partial: "./museum_card", locals: {museum: result} %>
       </div>
     <%end%>
   <% end %>
