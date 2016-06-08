@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
 
   def create
     museum = Museum.find_by(id: params[:favorite][:museum_id])
-    favorite = Favorite.find_or_create_by(user:current_user, museum: museum)
+    favorite = Favorite.find_or_create_by(user: current_user, museum: museum)
     if favorite.save
       if request.xhr?
         render partial: './favorite', layout: false, locals: {museum: museum, favorite: favorite}

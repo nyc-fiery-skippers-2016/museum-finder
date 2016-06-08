@@ -16,7 +16,7 @@ class Museum < ActiveRecord::Base
   end
 
   def is_favorite?(current_user)
-  	self.favorites.find_by(user_id: current_user.id) ? true : false
+  	!!self.favorites.find_by(user_id: current_user.id)
   end
 
   def google_address_link
