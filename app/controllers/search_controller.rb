@@ -4,7 +4,7 @@ class SearchController < ApplicationController
     if jump = jump_target
       redirect_to jump
     else
-      @results = Search.for(params[:keyword])
+      @results = Search.for(params[:keyword]) && Search.for_address(params[:keyword])
       @favorite = Favorite.new
     end
   end
