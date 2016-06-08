@@ -1,45 +1,55 @@
-.card {
-	display: inline-flex;
+.card-block {
 	outline: 2px solid black;
-	outline-style: 10px;
 	margin: 20px;
-	min-width: 500px;
+	width: 435px;
+
 }
+
+.museum-info {
+	display: inline-block;
+	float: left;
+	width:350px;
+}
+
 a:link {
 	text-decoration: none;
 }
 
 .dollar {
 	color: green;
-	font-size: 30px;
+	text-style: bold;
 }
+
 
 .card-img {
-	width: 300px;
+	width: 400px;
 	height: 300px;
-	margin: 10px;
 	background-size: cover;
 	overflow: hidden;
-	display: inline-block;
-}
+	margin: 15px 10px 10px 2px;
+	margin-left:none; 
+	}
 
 .card-text {
-	display: inline-block;
 	text-align: left;
-	margin: 10px;
+	margin: auto;
 	color: black;
+	height: 180px;
 }
 
-h1 a {
+h3 a {
 	color: black;
 }
 
 .address a {
 	color: #72C4B9;
+	font-weight: bold;
+
 }
 
 .favorite {
-	text-align: center;
+	display: inline-block;
+	float: right;
 }
 
 .favorite a {
