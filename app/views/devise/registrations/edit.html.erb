@@ -11,20 +11,20 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 
-<div class="row namey">
+<div class="row name">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
       <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true%>
+      <%= f.text_field :name, autofocus: true, class: 'form-control'%>
     </div>
   </div>
 </div>
 
 <div class="row mail">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
     </div>
   </div>
 </div>
@@ -35,35 +35,35 @@
 
 <div class="row word">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
       <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
     </div>
   </div>
 </div>
 
 <div class="row conf">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
     </div>
   </div>
 </div>
 
 <div class="row current">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
       <%= f.label :current_password %>
       <i>(we need your current password to confirm changes)</i>
-      <%= f.password_field :current_password, autocomplete: "off" %>
+      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
     </div>
   </div>
 </div>
 
 <div class="row month">
   <div class="col-xs-12">
-     <div class="field">
+     <div class="field checkbox form_group">
       <%= f.check_box :monthly_email, {}, true %>
       <%= f.label :monthly_email, "I would like to receive a monthly email detailing specials of museums I've favorited." %>
     </div>
@@ -74,7 +74,7 @@
 <div class="row update">
   <div class="col-xs-12">
     <div class="actions">
-      <%= f.submit "Update" %>
+      <%= f.submit "Update", class: 'btn btn-default' %>
     </div>
   </div>
 </div>
@@ -82,7 +82,10 @@
 <div class="row update">
   <div class="col-xs-12">
     <div class="cancel">
-      Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+      <i>Unhappy?</i>
+    </div>
+    <div class="cancel">
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: 'btn btn-default'%>
     </div>
   </div>
 </div>
