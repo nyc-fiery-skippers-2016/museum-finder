@@ -21,6 +21,8 @@
 @import "museums";
 @import "categories";
 @import "devise";
-body { font-family: 'Muli', Arial, serif; font-weight: 400;
-      background:none;
+body { font-family: 'Muli', Arial, serif;
+		font-weight: 400;
+     	background:none;
+     	min-height:200px;
  }
