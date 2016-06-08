@@ -10,7 +10,7 @@
   <div class="row">
     <% @category.museums.each do |museum| %>
     <div class="col-xs-6">
-      <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+      <%= render partial: "./museum_card", locals: {museum: museum} %>
     </div>
     <%end%>
   </div>

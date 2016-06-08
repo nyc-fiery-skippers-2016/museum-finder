@@ -27,7 +27,7 @@
 
       <div class="row icon-row">
         <div style="position:relative; text-align: center;right:16.5em; top:-2em;" class="col-xs-12">
-          <div class="favorite museum-fav"><%= render partial: "./favorite", locals: {museum: @museum, favorite: @favorite}%><br>
+          <div class="favorite museum-fav"><%= render partial: "./favorite", locals: {museum: @museum}%><br>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12" style="position:relative;">
-          <%= link_to @museum.formatted_address, @museum.google_address_link %>
+          <%= link_to @museum.formatted_address, @museum.google_address_link, target: "_blank" %>
         </div>
       </div>
       <div class="row">
