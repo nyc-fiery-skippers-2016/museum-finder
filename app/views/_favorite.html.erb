@@ -2,13 +2,13 @@
 	<% if signed_in? %>
 		<% if museum.is_favorite?(current_user) %>
 		<%= form_for :favorite, method: :delete, url: unfavorite_path, :html => {class:"filled-star"} do |f| %>
-			  <%= f.hidden_field :museum_id, value: museum.id %>
+			  <%= f.hidden_field :museum, value: museum %>
 			  <%= f.submit class:"filled-star star", value:"&#9733;".html_safe do%>
 			  <%end%>
 			<%end%>
 		<%else%>
 		<%= form_for :favorite, method: :create, url: favorite_path, :html => {class:"unfilled-star"} do |f| %>
-			  <%= f.hidden_field :museum_id, value: museum.id %>
+			  <%= f.hidden_field :museum, value: museum %>
 			  <%= f.submit class:"unfilled-star star", value:"&#9734;".html_safe do%>
 			  <%end%>
 			<%end%>
