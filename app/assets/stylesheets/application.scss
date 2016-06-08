@@ -22,6 +22,10 @@
 @import "categories";
 @import "devise";
 @import "layouts";
-body { font-family: 'Muli', Arial, serif; font-weight: 400;
-      background:none;
+
+body { font-family: 'Muli', Arial, serif;
+		font-weight: 400;
+     	background:none;
+     	min-height:200px;
+
  }
