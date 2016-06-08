@@ -1,8 +1,7 @@
-user show
-<%= @user.name %>'s Favorites
 
-<ul>
+<h1><%= @user.name.capitalize %>'s Favorites</h1>
+
+
 <% @user.favorite_museums.each do |museum| %>
-	<li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+	<%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
 <%end%>
-</ul>

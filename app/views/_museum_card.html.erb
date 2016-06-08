@@ -1,19 +1,20 @@
-<div class="card col-sm-6" data-free="<%= museum.is_free %>">
-	<%= link_to image_tag(museum.photos, class:"img-rounded pull-xs-left card-img"),museum_path(museum.id) %><br>
+<div class="card-block col-sm-6" data-free="<%= museum.is_free %>">
+	<%= link_to image_tag(museum.photos, class:"img card-img"),museum_path(museum.id) %><br>
 	<div class="card-text pull-xs-right">
-			<h1><%= link_to museum.name, museum_path(museum.id) %></h1>
-			<div class="address"><h4><%= link_to museum.formatted_address, museum.google_address_link, target: "_blank" %></h4></div>
+			<div class="museum-info"><h3><%= link_to museum.name, museum_path(museum.id) %></h3>
+			<div class="address"><%= link_to museum.formatted_address, museum.google_address_link, target: "_blank" %></div> 
 			<% if museum.opening_hours.empty? %>
-			  <p>No Hours Available </p>
+			  No Hours Available<br>
 			<% else %>
-			  Hours for <%= museum.hours_today %><br>
+			  Hours today<%= museum.hours_today %><br>
 			<% end %>
 			<% if museum.is_free %>
-			  <h5>Suggested donation</h5>
+			  Suggested donation
 			<% else %>
-			  <span class="dollar">$</span>
-			<% end %><br><br>
-			<div class="favorite"><%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
+			  <div class=dollar>Entry fee</div>
+			<% end %>
+			</div>
+			<div class="favorite text-right"><%= render partial: "./favorite", locals: {museum: museum, favorite: favorite}%><br>
 			</div>
 	</div>
 </div>
