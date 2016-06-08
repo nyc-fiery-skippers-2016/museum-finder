@@ -18,48 +18,48 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row confirm">
   <div class="col-xs-12">
-    <div class="name">
+    <div class="row-xs-3 form_group">
       <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true%>
-    </div>
-  </div>
-</div>
-
-<div class="row mail">
-  <div class="col-xs-12">
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-  </div>
-</div>
-
-<div class="row pass">
-  <div class="col-xs-12">
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.text_field :name, autofocus: true, class: 'form-control'%></br>
     </div>
   </div>
 </div>
 
 <div class="row confirm">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="row-xs-3 form_group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: 'form-control' %><br />
+    </div>
+  </div>
+</div>
+
+<div class="row confirm">
+  <div class="col-xs-12">
+    <div class="row-xs-3 form_group">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %><br />
+    </div>
+  </div>
+</div>
+
+<div class="row confirm">
+  <div class="col-xs-12">
+    <div class="row-xs-3 form_group">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
     </div>
   </div>
 </div>
 
 <div class="row monthly">
   <div class="col-xs-12">
-    <div class="field">
+    <div class="field checkbox form_group">
       <%= f.check_box :monthly_email, {}, true %>
       <%= f.label :monthly_email, "I would like to receive a monthly email detailing specials of museums I've favorited." %>
     </div>
@@ -69,7 +69,7 @@
 <div class="row sign">
   <div class="col-xs-12">
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign Up", class: "btn btn-default" %>
     </div>
   </div>
 </div>
