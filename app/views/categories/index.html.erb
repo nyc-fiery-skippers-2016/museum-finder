@@ -10,7 +10,7 @@
   <div class="row">
   <% @categories.each do |category| %>
       <div class="col-xs-4">
-        <h4>
+        <h4 class="title">
           <a href="/categories/<%= category.id %>">
             <%= category.name.upcase %>
           </a>
