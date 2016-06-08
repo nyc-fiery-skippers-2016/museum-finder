@@ -15,7 +15,7 @@
 
 
 .jumbotron {
-  background-image: image-url("met-photo.jpg");
+  background-image: image-url("NYC.jpg");
   background-size: cover !important;
   background-position: center;
   background-attachment: fixed;
@@ -27,15 +27,15 @@
 .custom-jumbotron-inner-container {
   padding: 20% 3%;
   text-align: center;
+  margin-top:0%;
 }
 
 .custom-jumbotron-inner-container h1 {
-  font-size: 4em;
-  width: 30%;
+  font-size: 6em;
+  width: 40%;
   margin: auto;
-  border: 6px solid white;
   color: white;
-  background-color: rgba(211,211,211,0.4);
+//  background-color: rgba(211,211,211,0.4);
 }
 
 // .navbar {
