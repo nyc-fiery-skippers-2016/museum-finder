@@ -5,7 +5,7 @@
   <p>No Free Museums</p>
 <% else %>
   <% category.free_museums.each do |museum| %>
-    <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+    <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
   <% end %>
 <% end %>
 </ul>
@@ -15,6 +15,6 @@
 <ul>
 <% category.cost_museums.each do |museum|
   %>
-  <li><%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %></li>
+  <li><%= render partial: "./museum_card", locals: {museum: museum} %></li>
 <% end %>
 </ul>

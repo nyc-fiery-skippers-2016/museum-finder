@@ -19,7 +19,7 @@
 
       <div class="museums-container">
       <% @art.museums.each do |museum| %>
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+          <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
       </div>
@@ -32,7 +32,7 @@
 
       <div class="museums-container">
       <% @history.museums.each do |museum| %>
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+          <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
       </div>
@@ -46,7 +46,7 @@
 
       <div class="museums-container">
       <% @science.museums.each do |museum| %>
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+          <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
       </div>
@@ -60,7 +60,7 @@
 
       <div class="museum-container">
       <% @childrens.museums.each do |museum| %>
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+          <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
       </div>
@@ -74,7 +74,7 @@
 
       <div class="museums-container">
       <% @cultural.museums.each do |museum| %>
-        <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+        <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
     </div>
@@ -88,7 +88,7 @@
 
       <div class="museums-container">
       <% @outdoor.museums.each do |museum| %>
-          <%= render partial: "./museum_card", locals: {museum: museum, favorite: @favorite} %>
+          <%= render partial: "./museum_card", locals: {museum: museum} %>
       <% end %>
       </div>
     </div>
