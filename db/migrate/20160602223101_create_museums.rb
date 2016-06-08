@@ -7,7 +7,7 @@ class CreateMuseums < ActiveRecord::Migration
       t.decimal :lat
       t.decimal :lng
       t.string :opening_hours
-      t.string :photo
+      t.string :photos
       t.string :place_id
       t.string :rates
       t.string :is_free
