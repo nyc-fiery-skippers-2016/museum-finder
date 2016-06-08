@@ -1,6 +1,6 @@
 <div class="card-block col-sm-6" data-free="<%= museum.is_free %>">
 
-	<%= link_to image_tag(museum.photo, class:"img card-img"),museum_path(museum.id) %><br>
+<%= link_to image_tag(museum.photo, class:"img card-img"),museum_path(museum.id) %><br>
 
 	<div class="card-text pull-xs-right">
 			<div class="museum-info"><h3><%= link_to museum.name, museum_path(museum.id) %></h3>
