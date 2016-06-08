@@ -1,7 +1,7 @@
-<div class="card col-sm-6" data-free="<%= museum.is_free %>">
+<div class="card-block col-sm-6" data-free="<%= museum.is_free %>">
 	<%= link_to image_tag(museum.photos, class:"img-rounded pull-xs-left card-img"),museum_path(museum.id) %><br>
 	<div class="card-text pull-xs-right">
-			<h1><%= link_to museum.name, museum_path(museum.id) %></h1>
+			<h2><%= link_to museum.name, museum_path(museum.id) %></h2>
 			<div class="address"><h4><%= link_to museum.formatted_address, museum.google_address_link, target: "_blank" %></h4></div>
 			<% if museum.opening_hours.empty? %>
 			  <p>No Hours Available </p>
