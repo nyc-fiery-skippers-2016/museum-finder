@@ -13,17 +13,9 @@
   font-size: large;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
 
-.home-image {
-  background-image: image-url("met_home.jpeg");
+.jumbotron {
+  background-image: image-url("met-photo.jpg");
   background-size: cover !important;
   background-position: center;
   background-attachment: fixed;
@@ -31,3 +23,21 @@ footer {
   height: auto;
   padding: bottom;
 }
+
+.custom-jumbotron-inner-container {
+  padding: 20% 3%;
+  text-align: center;
+}
+
+.custom-jumbotron-inner-container h1 {
+  font-size: 4em;
+  width: 30%;
+  margin: auto;
+  border: 6px solid white;
+  color: white;
+  background-color: rgba(211,211,211,0.4);
+}
+
+// .navbar {
+//   background-color: #829595;
+// }
