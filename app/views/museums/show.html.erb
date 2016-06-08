@@ -27,7 +27,8 @@
 
       <div class="row icon-row">
         <div style="position:relative; text-align: center" class="col-xs-12">
-          <span class="glyphicon glyphicon-star-empty style3"></span>
+          <div class="favorite"><%= render partial: "./favorite", locals: {museum: @museum, favorite: @favorite}%><br>
+          </div>
         </div>
       </div>
     </div>
