@@ -13,13 +13,9 @@
   font-size: large;
 }
 
-// body {
-//   max-width: 1024px;
-//   margin: 0 auto;
-// }
 
-.home-image {
-  background-image: image-url("met_home.jpeg");
+.jumbotron {
+  background-image: image-url("met-photo.jpg");
   background-size: cover !important;
   background-position: center;
   background-attachment: fixed;
@@ -27,3 +23,21 @@
   height: auto;
   padding: bottom;
 }
+
+.custom-jumbotron-inner-container {
+  padding: 20% 3%;
+  text-align: center;
+}
+
+.custom-jumbotron-inner-container h1 {
+  font-size: 4em;
+  width: 30%;
+  margin: auto;
+  border: 6px solid white;
+  color: white;
+  background-color: rgba(211,211,211,0.4);
+}
+
+// .navbar {
+//   background-color: #829595;
+// }
