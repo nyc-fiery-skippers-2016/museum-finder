@@ -1,0 +1,43 @@
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.padded-nav {
+  padding-top: 2%;
+  font-size: large;
+}
+
+
+.jumbotron {
+  background-image: image-url("NYC.jpg");
+  background-size: cover !important;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -60px;
+  height: auto;
+  padding: bottom;
+}
+
+.custom-jumbotron-inner-container {
+  padding: 3% 3% 48%;
+  text-align: center;
+  margin-top:0%;
+}
+
+.custom-jumbotron-inner-container h1 {
+  font-size: 6em;
+  width: 60%;
+  margin: auto;
+  color: #3F9895;
+//  background-color: rgba(211,211,211,0.4);
+}
+
+// .navbar {
+//   background-color: #829595;
+// }

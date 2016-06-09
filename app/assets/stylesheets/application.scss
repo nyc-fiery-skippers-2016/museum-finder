@@ -12,9 +12,20 @@
  *
 
  *=require_bootstrap
- *=require_self
- *=require_tree .
+ .
 */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "favorites";
+@import "museums";
+@import "categories";
+@import "devise";
+@import "layouts";
+
+body { font-family: 'Muli', Arial, serif;
+		font-weight: 400;
+     	background: none;
+     	margin-bottom: 80px;
+}
+

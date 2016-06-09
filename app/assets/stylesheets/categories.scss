@@ -1,3 +1,23 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.category-show-header {
+  color: black;
+}
+#category-back-link {
+  font-size: .75em;
+}
+#category-back-link a:hover {
+  color: #3F9895;
+  transition: color;
+  text-decoration: none;
+}
+
+.category-name {
+  text-align: center;
+}
+
+
+@import "category_index";
+

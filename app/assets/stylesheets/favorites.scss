@@ -1,0 +1,33 @@
+
+.favorite a {
+	color: #A4D0C4;
+}
+
+.star {
+	padding: 0;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 45px;
+	font-family: Helvetica;
+}
+
+.unfilled-star {
+	color: #3F9895;
+}
+
+.unfilled-star:hover {
+	color: #72c4b9;
+}
+
+.filled-star {
+	color: #3F9895;
+}
+
+.filled-star:hover {
+	color: #A4D0C4;
+}
+
+.museum-fav .star{
+	font-size:100px;
+}

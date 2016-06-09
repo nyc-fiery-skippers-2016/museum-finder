@@ -1,6 +1,5 @@
 class Museum < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
-  serialize :photos
 
   has_many :museum_categories
   has_many :categories, through: :museum_categories
@@ -17,7 +16,7 @@ class Museum < ActiveRecord::Base
   end
 
   def is_favorite?(current_user)
-  	self.favorites.find_by(user_id: current_user.id) ? true : false
+  	!!self.favorites.find_by(user_id: current_user.id)
   end
 
   def google_address_link
@@ -26,9 +25,10 @@ class Museum < ActiveRecord::Base
   end
 
   def hours_today
+    today = Date.today.strftime("%A")
     opening_hours.each do |day|
-      if day.include?(Date.today.strftime("%A"))
-        return day
+      if day.include?(today)
+        return day.gsub(today, "")
       end
     end
   end

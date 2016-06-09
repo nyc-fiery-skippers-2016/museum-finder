@@ -1,7 +1,6 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
-
     respond_to do |format|
       format.html
       format.json { render json: @categories }
@@ -15,12 +14,10 @@ class CategoriesController < ApplicationController
     @childrens = Category.find_by(name: "Children's")
     @cultural = Category.find_by(name: "Cultural")
     @outdoor = Category.find_by(name: "Outdoor")
-    @favorite = Favorite.new
   end
 
   def show
     @category = Category.find_by(id: params[:id])
-    @favorite = Favorite.new
   end
 
 end

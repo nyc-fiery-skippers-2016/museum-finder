@@ -1,9 +1,21 @@
-<ul class="results">
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12">
+        <h3>Search results for: "<%= @keyword %>"" </h3>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
   <% if @results.blank? %>
-    <li><i>No Museums Found</i></li>
+    <i>No Museums Found</i>
   <% else %>
     <% @results.each do |result| %>
-      <%= render partial: "./museum_card", locals: {museum: result, favorite: @favorite} %><br>
-    <% end %>
+    <div class="col-xs-6">
+      <%= render partial: "./museum_card", locals: {museum: result} %>
+      </div>
+    <%end%>
   <% end %>
-</ul>
+  </div>
+  </div>

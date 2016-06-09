@@ -5,11 +5,11 @@ class Category < ActiveRecord::Base
   has_many :museums, through: :museum_categories
 
   def free_museums
-    museums.where(is_free: "true")
+  	museums.where(is_free: "true")
   end
 
-   def cost_museums
-    museums.where(is_free: nil)
+  def cost_museums
+  	museums.where(is_free: nil)
   end
 end
 
