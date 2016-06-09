@@ -66,63 +66,148 @@ categories.each do |category|
 end
 
 artArray1 = [1,4,8,10,11,12,13,14,15,24,20,21,22,26,29,36,37,38,44,46]
-historyArray9 = [2,19,21,27,41,33,34,42,43]
-scienceArray14 = [5,6,16,30,31,32,34,39,40]
-childrensArray21 = [7,9]
-culturalArray22 = [12,17,18,19,23,25,28,35,42]
-outdoorArray32 = [5,6,16,31,35,40,45]
-classicArtArray2 = [13, 10, 21, 27, 8, 20]
-decorativeArray3 = [11, 22, 8, 24]
-modernArray4 = [4, 14, 22, 29, 26, 36, 38,40, 46, 8, 20, 37]
-filmArray5 = [15, 17, 26, 38, 20, 37]
-sculptureArray6 = [13, 10, 22, 29, 26, 35, 46, 20]
-textileArray7 = [20]
-archArray8 = [19, 39]
-natHistoryArray10 = [30, 32, 2]
-histHomesArray11 = [19]
-sportsArray12
-militaryArray13
-techArray15 = [39]
-mediaArray16
-transArray17 = [34]
-maritimeArray18 = [16, 41]
-zooArray19 = [5]
-gardenArray20 = [6, 10, 17, 31, 35, 40, 45]
-memorialArray23
-aaArray24 = [28, 44]
-localArray25 = [6, 27, 41, 42, 43, 8, 37]
-jewishArray26 = [18, 25]
-naArray27 = [28]
-regionalArray28 = [12, 17, 23, 28, 38]
-amusementArray29 = [16, 30, 41]
-religiousArray30 = [18, 25]
-musicArray31 = [21, 36]
-
-
-
 artArray1.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 1)
 end
 
+historyArray9 = [2,19,21,27,41,33,34,42,43]
 historyArray9.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 9)
 end
 
+scienceArray14 = [5,6,16,30,31,32,34,39,40]
 scienceArray14.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 14)
 end
 
+childrensArray21 = [7,9]
 childrensArray21.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 21)
 end
 
+culturalArray22 = [12,17,18,19,23,25,28,35,42]
 culturalArray22.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 22)
 end
 
+outdoorArray32 = [5,6,16,31,35,40,45]
 outdoorArray32.each do |museumId|
   MuseumCategory.create!(museum_id: museumId, category_id: 32)
 end
+
+classicArtArray2 = [13, 10, 21, 27, 8, 20]
+classicArtArray2.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 2)
+end
+
+decorativeArray3 = [11, 22, 8, 24]
+decorativeArray3.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 3)
+end
+
+modernArray4 = [4, 14, 22, 29, 26, 36, 38,40, 46, 8, 20, 37]
+modernArray4.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 4)
+end
+
+filmArray5 = [15, 17, 26, 38, 20, 37]
+filmArray5.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 5)
+end
+
+sculptureArray6 = [13, 10, 22, 29, 26, 35, 46, 20]
+sculptureArray6.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 6)
+end
+
+textileArray7 = [20]
+textileArray7.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 7)
+end
+
+archArray8 = [19, 39]
+archArray8.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 8)
+end
+
+natHistoryArray10 = [30, 32, 2]
+natHistoryArray10.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 10)
+end
+
+histHomesArray11 = [19]
+histHomesArray11.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 11)
+end
+
+techArray15 = [39]
+techArray15.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 15)
+end
+
+transArray17 = [34]
+transArray17.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 17)
+end
+
+maritimeArray18 = [16, 41]
+maritimeArray18.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 18)
+end
+
+zooArray19 = [5]
+zooArray19.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 19)
+end
+
+gardenArray20 = [6, 10, 17, 31, 35, 40, 45]
+gardenArray20.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 20)
+end
+
+aaArray24 = [28, 44]
+aaArray24.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 24)
+end
+
+localArray25 = [6, 27, 41, 42, 43, 8, 37]
+localArray25.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 25)
+end
+
+jewishArray26 = [18, 25]
+jewishArray26.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 26)
+end
+
+naArray27 = [28]
+naArray27.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 27)
+end
+
+regionalArray28 = [12, 17, 23, 28, 38]
+regionalArray28.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 28)
+end
+
+amusementArray29 = [16, 30, 41]
+amusementArray29.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 29)
+end
+
+religiousArray30 = [18, 25]
+religiousArray30.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 30)
+end
+
+musicArray31 = [21, 36]
+musicArray31.each do |museumId|
+  MuseumCategory.create!(museum_id: museumId, category_id: 31)
+end
+# memorialArray23
+# mediaArray16
+# sportsArray12
+# militaryArray13
 
 #create users
 
