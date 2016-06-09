@@ -4,17 +4,22 @@
 
 <div class="container lower bottom">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field name col-xs-12">
+      <div class="row-xs-3 form-group">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-  </div>
+      </div>
 
- <div class="field name col-xs-12">
+ <div class="row password">
+    <div class="col-xs-12">
+      <div class="row-xs-3 form_group">
         <%= f.label :password %><br />
         <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+      </div>
   </div>
+</div>
 
- <div class="row remember col-xs-12">
+ <div class="row remember">
+    <div class="col-xs-12">
     <% if devise_mapping.rememberable? -%>
         <div class="field">
           <%= f.check_box :remember_me %>
@@ -22,6 +27,7 @@
         </div>
     <% end %>
   </div>
+</div>
 
 <div class="row login">
     <div class="col-xs-12">

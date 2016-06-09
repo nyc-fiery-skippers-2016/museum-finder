@@ -37,12 +37,14 @@
   <%= f.label :monthly_email, "I would like to receive a monthly email detailing specials of museums I've favorited." %>
 </div>
 
-<div class="actions name login">
+  <div class= "col-xs-12 row name login">
+    <div class="actions">
   <%= f.submit "Sign Up", class: "btn btn-default" %>
 </div>
 <% end %>
+</div>
 
-<div class="row links" id="new-links">
+<div class="col-xs-12 name links" id="new-links">
     <%= render "devise/shared/links" %>
 </div>
 
