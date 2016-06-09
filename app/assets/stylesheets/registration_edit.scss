@@ -1,50 +1,26 @@
-.edit{
+.form-title{
   position:relative;
   text-align:center;
   font-size:3em;
-  top:-.5em;
 }
 
-.bottom{
-  position: relative;
-  top:2em;
-}
-
-.namey{
+.register{
   position:relative;
-  top:-2.1em;
+  width:38%;
 }
 
-.mail{
+.name{
   position:relative;
-  top:-1.5em;
+  margin-bottom: 1em;
 }
 
-.word{
-  position:relative;
-  top:-.5em;
-}
-
-.conf{
-  position:relative;
-  top:.75em;
+.errors {
+  list-style: none;
+  text-align: center;
 }
 
 .month{
-  position:relative;
   text-align:left;
-  top:3em;
-}
-
-.current{
-  position:relative;
-  top:2em;
-  text-align:left
-}
-
-.update{
-  position:relative;
-  top:4em;
 }
 
 #user_current_password{
@@ -53,8 +29,21 @@
   width:38%;
 }
 
-.cancel{
-  position:relative;
-  top:1.75em;
+.checkbox {
+  text-align: left;
+  margin-left: 4.5%;
 }
 
+.links {
+  margin-top: 1em;
+  text-align: center;
+}
+
+#new-links {
+  margin-top: 4em;
+}
+
+.links a {
+  color: black;
+  text-align: center;
+}

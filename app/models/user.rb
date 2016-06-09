@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favorite_museums, through: :favorites, source: :museum
 
   validates_presence_of :name
