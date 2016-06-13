@@ -1,7 +1,7 @@
-desc "This task send a test email through puts"
+desc "This task sends a monthly newsletter"
+
 task :monthly_email => :environment do
-  puts "WORKS!!!!!!!!!!!!!"
-  puts ENV["GMAIL_USERNAME"]
-  puts ENV["GMAIL_PASSWORD"]
-      NewsLetter.monthly_email.deliver_now
+ if [ "$(date +%d)" = 01 ];
+   NewsLetter.monthly_email.deliver_now
+ end
 end
