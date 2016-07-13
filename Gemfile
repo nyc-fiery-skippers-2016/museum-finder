@@ -37,6 +37,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 
+gem 'faker'
+
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
