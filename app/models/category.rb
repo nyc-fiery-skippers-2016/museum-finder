@@ -11,5 +11,11 @@ class Category < ActiveRecord::Base
   def cost_museums
   	museums.where(is_free: nil)
   end
+
+  #method to only display categories with museums sorted into them
+  def has_museums?
+  	self.museums != []
+  end
+
 end
 

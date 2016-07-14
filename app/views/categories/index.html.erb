@@ -9,13 +9,15 @@
 <div class="container category-list ">
   <div class="row">
   <% @categories.each do |category| %>
+    <%if category.has_museums?%>
       <div class="col-xs-4">
         <h4 class="title">
           <a href="/categories/<%= category.id %>">
-            <%= category.name.upcase %>
+              <%= category.name.upcase %>
           </a>
         </h4>
       </div>
     <%end%>
+  <%end%>
   </div>
 </div>
