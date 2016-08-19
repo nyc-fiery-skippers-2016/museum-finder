@@ -4,6 +4,7 @@
 $(document).ready(function(){
   $(".category").hide();
   $("#art-category").show();
+  $("#all-price").show();
   $(".padded-nav").on("click", "a", function(e) {
     e.preventDefault();
     var tab = $(this).attr("id");
