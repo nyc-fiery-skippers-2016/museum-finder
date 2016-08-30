@@ -1,17 +1,37 @@
 <div class="container">
+   <ul class="nav nav-pills padded-nav">
+      <li class="active"><%= link_to "All", category_path(@category), :id => "all" %></li>
+      <li><%= link_to "Suggested $$", category_path(@category), :id => "suggested" %></li>
+      <li><%= link_to "Cost $$", category_path(@category), :id => "cost" %></li>
+    </ul>
   <div class="row">
       <div class="col-xs-12">
         <h3 class="category-name"><%= @category.name %> Museums </h3>
       </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
+  <div id='all-price' class="category">
+  <div class="museums-container">
     <% @category.museums.each do |museum| %>
-    <div class="col-xs-6">
       <%= render partial: "./museum_card", locals: {museum: museum} %>
-    </div>
     <%end%>
   </div>
+  </div>
+
+  <div id="suggested-price" class="category">
+    <div class="museums-container">
+      <% @category.museums.where.not(is_free: nil).each do |museum| %>
+        <%= render partial: "./museum_card", locals: {museum: museum} %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="cost-price" class="category">
+    <div class="museums-container">
+      <% @category.museums.where(is_free: nil).each do |museum| %>
+        <%= render partial: "./museum_card", locals: {museum: museum} %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
